@@ -8,32 +8,32 @@ This document describes the architecture of the Fall Detection System, including
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                           Fall Detection System                          │
+│                           Fall Detection System                         │
 ├─────────────────────────────────────────────────────────────────────────┤
-│                                                                          │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────────────────┐  │
-│  │   C3D File   │───►│   Features   │───►│   Detector (Rules/ML)    │  │
-│  │   Reader     │    │  Extraction  │    │                          │  │
-│  └──────────────┘    └──────────────┘    └────────────┬─────────────┘  │
+│                                                                         │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────────────────┐   │
+│  │   C3D File   │───►│   Features   │───►│   Detector (Rules/ML)    │   │
+│  │   Reader     │    │  Extraction  │    │                          │   │
+│  └──────────────┘    └──────────────┘    └────────────┬─────────────┘   │
 │         │                   │                         │                 │
 │         │                   │                         ▼                 │
-│         │                   │            ┌──────────────────────────┐  │
-│         │                   │            │   Fall Analysis Result   │  │
-│         │                   │            │   - fall_detected        │  │
-│         │                   │            │   - confidence           │  │
-│         │                   │            │   - fall_type            │  │
-│         │                   │            │   - phase_timeline       │  │
-│         │                   │            └──────────────────────────┘  │
+│         │                   │            ┌──────────────────────────┐   │
+│         │                   │            │   Fall Analysis Result   │   │
+│         │                   │            │   - fall_detected        │   │
+│         │                   │            │   - confidence           │   │
+│         │                   │            │   - fall_type            │   │
+│         │                   │            │   - phase_timeline       │   │
+│         │                   │            └──────────────────────────┘   │
 │         │                   │                         │                 │
 │         ▼                   ▼                         ▼                 │
-│  ┌─────────────────────────────────────────────────────────────────┐   │
-│  │                     Biomechanics Module                          │   │
-│  │  - Center of Mass (Dempster 1955)                               │   │
-│  │  - Margin of Stability (Hof 2005)                               │   │
-│  │  - Trunk Tilt Calculation                                        │   │
-│  │  - Impact Detection                                              │   │
-│  └─────────────────────────────────────────────────────────────────┘   │
-│                                                                          │
+│  ┌─────────────────────────────────────────────────────────────────┐    │
+│  │                     Biomechanics Module                         │    │
+│  │  - Center of Mass (Dempster 1955)                               │    │
+│  │  - Margin of Stability (Hof 2005)                               │    │
+│  │  - Trunk Tilt Calculation                                       │    │
+│  │  - Impact Detection                                             │    │
+│  └─────────────────────────────────────────────────────────────────┘    │
+│                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -98,9 +98,9 @@ src/
                    ▼
     ┌──────────────────────────────────────┐
     │            classifiers/              │
-    │  ┌─────────────┐  ┌──────────────┐  │
-    │  │  fall_type  │  │  near_fall   │  │
-    │  └─────────────┘  └──────────────┘  │
+    │  ┌─────────────┐  ┌──────────────┐   │
+    │  │  fall_type  │  │  near_fall   │   │
+    │  └─────────────┘  └──────────────┘   │
     └──────────────────────────────────────┘
 ```
 
@@ -410,10 +410,3 @@ def calculate_whole_body_com(markers, config):
 2. Document source in `docs/THRESHOLDS.md`
 3. Use in detection logic
 
----
-
-## Updates
-
-| Date | Change |
-|------|--------|
-| 2026-01-02 | Initial documentation created |

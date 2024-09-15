@@ -168,11 +168,3 @@ MoS = signed_distance(XCoM, BoS_boundary)
 | MoS | Literature-based | From Hof et al. (2005) |
 | Height | Empirical | Based on anthropometry |
 | Post-fall | Empirical | Needs validation study |
-
----
-
-## Updates
-
-| Date | Change |
-|------|--------|
-| 2026-01-02 | Initial documentation created |

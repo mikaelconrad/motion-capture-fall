@@ -267,10 +267,3 @@ cp new_recording.c3d data/internal/non_falls/
 python tools/evaluate.py --validate
 ```
 
----
-
-## Updates
-
-| Date | Change |
-|------|--------|
-| 2026-01-02 | Initial documentation created |

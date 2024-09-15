@@ -217,10 +217,3 @@ When citing this system in academic work:
 }
 ```
 
----
-
-## Updates
-
-| Date | Change |
-|------|--------|
-| 2026-01-02 | Initial documentation created |
