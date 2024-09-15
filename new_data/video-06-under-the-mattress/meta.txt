@@ -1,0 +1,6 @@
+Duration	10
+DurationInFrames	500
+Framerate	50/1
+Name	video-06-under-the-mattress
+StartTimestamp	1755362600125985
+Time	2025-08-16 18:43:20

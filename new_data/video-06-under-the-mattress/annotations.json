@@ -1,0 +1,44 @@
+{
+  "video_id": "video-06-under-the-mattress",
+  "annotator": "auto",
+  "annotation_date": "2025-12-05",
+  "frame_rate": 50.0,
+  "total_frames": 500,
+  "ground_truth_fall": false,
+  "phases": [
+    {
+      "phase": "pre_fall",
+      "frame_start": 0,
+      "frame_end": 499,
+      "time_start_s": 0.0,
+      "time_end_s": 9.98,
+      "confidence": 1.0,
+      "notes": "Non-fall activity"
+    }
+  ],
+  "events": [
+    {
+      "frame": 235,
+      "time_s": 4.7,
+      "event_type": "impact_primary",
+      "severity": "high",
+      "notes": "Impact z-score: 8.6, 1.4g"
+    },
+    {
+      "frame": 209,
+      "time_s": 4.18,
+      "event_type": "max_descent_velocity",
+      "severity": "medium",
+      "notes": "Vertical velocity: -0.92 m/s"
+    },
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "event_type": "max_trunk_tilt",
+      "severity": "high",
+      "notes": "Trunk tilt: 89.0 degrees"
+    }
+  ],
+  "notes": "Auto-generated from video-06-under-the-mattress.c3d",
+  "quality": "good"
+}

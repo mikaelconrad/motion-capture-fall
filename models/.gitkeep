@@ -1,0 +1,2 @@
+# This file preserves the models directory in git
+# Trained model files (.pt, .pth) are excluded via .gitignore

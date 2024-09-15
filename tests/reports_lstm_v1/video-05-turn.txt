@@ -1,0 +1,12 @@
+File: video-05-turn
+Expected fall: False
+Predicted fall: False
+Confidence: 38.89
+Activity type: general_motion
+Characteristics: lstm_detection
+Metrics:
+  max_fall_probability: 0.3889
+  mean_fall_probability: 0.385
+  n_sequences: 19
+  threshold: 0.5
+  model_type: LSTM

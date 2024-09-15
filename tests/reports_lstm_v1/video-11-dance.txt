@@ -1,0 +1,12 @@
+File: video-11-dance
+Expected fall: False
+Predicted fall: False
+Confidence: 39.66
+Activity type: controlled_descent
+Characteristics: lstm_detection
+Metrics:
+  max_fall_probability: 0.3966
+  mean_fall_probability: 0.3874
+  n_sequences: 17
+  threshold: 0.5
+  model_type: LSTM

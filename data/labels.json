@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "created": "2026-01-02",
+  "description": "Ground truth labels for fall detection evaluation",
+  "source": "Converted from tests/results_v3.txt",
+  "evaluation_metrics": {
+    "true_positive_reward": 2,
+    "true_negative_reward": 1,
+    "false_positive_penalty": -3,
+    "false_negative_penalty": -2
+  },
+  "videos": [
+    {
+      "id": "video-02-epic-fall",
+      "file": "internal/falls/video-02-epic-fall.c3d",
+      "fall": true,
+      "fall_type": "collapse",
+      "confidence": 1.0,
+      "notes": "Clear collapse from standing position"
+    },
+    {
+      "id": "video-04-short-fall-standing-up-try",
+      "file": "internal/falls/video-04-short-fall-standing-up-try.c3d",
+      "fall": true,
+      "fall_type": "unknown",
+      "confidence": 0.9,
+      "notes": "Short fall during standing attempt"
+    },
+    {
+      "id": "video-05-turn",
+      "file": "internal/non_falls/video-05-turn.c3d",
+      "fall": false,
+      "activity": "turning",
+      "notes": "Normal turning motion while standing"
+    },
+    {
+      "id": "video-06-under-the-mattress",
+      "file": "internal/non_falls/video-06-under-the-mattress.c3d",
+      "fall": false,
+      "activity": "controlled_descent",
+      "notes": "Intentional controlled descent onto mattress"
+    },
+    {
+      "id": "video-09-meditation",
+      "file": "internal/non_falls/video-09-meditation.c3d",
+      "fall": false,
+      "activity": "meditation_lying",
+      "notes": "Slow controlled transition to lying position"
+    },
+    {
+      "id": "video-11-dance",
+      "file": "internal/non_falls/video-11-dance.c3d",
+      "fall": false,
+      "activity": "rhythmic_motion",
+      "notes": "Dancing with rapid movements"
+    }
+  ]
+}

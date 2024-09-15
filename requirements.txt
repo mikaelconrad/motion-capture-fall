@@ -1,0 +1,33 @@
+# Fall Detection System Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+c3d>=0.5.0                    # C3D motion capture file reading
+numpy>=1.21.0                 # Numerical computation
+scipy>=1.9.0                  # Scientific computing (ConvexHull, signal processing)
+
+# Web API
+flask>=2.0.0                  # REST API server
+flask-cors>=3.0.0             # CORS support for frontend
+
+# Visualization
+matplotlib>=3.5.0             # Plotting utilities
+pandas>=1.4.0                 # Data analysis (optional, for reports)
+
+# Biomechanics
+shapely>=2.0.0                # Polygon operations for Margin of Stability
+
+# Machine Learning (optional - for LSTM training)
+# torch>=2.0.0                # PyTorch (install separately based on your CUDA version)
+# tensorboard>=2.10.0         # Training visualization
+
+# AWS (optional - for cloud training)
+# boto3>=1.26.0               # AWS SDK
+python-dotenv>=1.0.0          # Load .env configuration
+
+# Testing
+pytest>=7.0.0                 # Test framework
+
+# Development
+# black>=22.0.0               # Code formatting
+# mypy>=0.990                 # Type checking

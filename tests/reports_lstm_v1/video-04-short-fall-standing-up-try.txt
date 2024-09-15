@@ -1,0 +1,12 @@
+File: video-04-short-fall-standing-up-try
+Expected fall: True
+Predicted fall: True
+Confidence: 51.49
+Activity type: general_motion
+Characteristics: lstm_detection, high_fall_probability
+Metrics:
+  max_fall_probability: 0.5149
+  mean_fall_probability: 0.4157
+  n_sequences: 19
+  threshold: 0.5
+  model_type: LSTM

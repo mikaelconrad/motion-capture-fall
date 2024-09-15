@@ -1,0 +1,12 @@
+File: video-06-under-the-mattress
+Expected fall: False
+Predicted fall: True
+Confidence: 51.30
+Activity type: general_motion
+Characteristics: lstm_detection, high_fall_probability
+Metrics:
+  max_fall_probability: 0.513
+  mean_fall_probability: 0.4335
+  n_sequences: 19
+  threshold: 0.5
+  model_type: LSTM

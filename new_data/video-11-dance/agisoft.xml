@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document version="1.5.0">
+  <chunk label="Chunk 1" enabled="true">
+    <sensors>
+      <sensor id="0" label="videoloader" type="frame">
+        <resolution width="10000" height="5666"/>
+        <property name="pixel_width" value="0.001056"/>
+        <property name="pixel_height" value="0.001056"/>
+        <property name="focal_length" value="0.579716"/>
+        <calibration type="frame" class="adjusted">
+      <resolution width="10000" height="5666"/>
+      <f>548.973633</f>
+      <cx>5113.528809</cx>
+      <cy>2834.388428</cy>
+      <k1>-0.001731</k1>
+      <k2>0.000742</k2>
+      <k3>0.000482</k3>
+      <p1>-0.000018</p1>
+      <p2>0.000000</p2>
+        </calibration>
+      </sensor>
+      <sensor id="1" label="videoloader" type="frame">
+        <resolution width="10000" height="5666"/>
+        <property name="pixel_width" value="0.001056"/>
+        <property name="pixel_height" value="0.001056"/>
+        <property name="focal_length" value="0.585500"/>
+        <calibration type="frame" class="adjusted">
+      <resolution width="10000" height="5666"/>
+      <f>554.450684</f>
+      <cx>5152.032227</cx>
+      <cy>2912.758057</cy>
+      <k1>0.000746</k1>
+      <k2>-0.003676</k2>
+      <k3>0.000043</k3>
+      <p1>0.000179</p1>
+      <p2>0.000000</p2>
+        </calibration>
+      </sensor>
+      <sensor id="2" label="videoloader" type="frame">
+        <resolution width="10000" height="5666"/>
+        <property name="pixel_width" value="0.001056"/>
+        <property name="pixel_height" value="0.001056"/>
+        <property name="focal_length" value="0.578807"/>
+        <calibration type="frame" class="adjusted">
+      <resolution width="10000" height="5666"/>
+      <f>548.112610</f>
+      <cx>4996.015625</cx>
+      <cy>2785.914795</cy>
+      <k1>-0.000187</k1>
+      <k2>-0.000639</k2>
+      <k3>0.000249</k3>
+      <p1>-0.000410</p1>
+      <p2>0.000000</p2>
+        </calibration>
+      </sensor>
+      <sensor id="3" label="videoloader" type="frame">
+        <resolution width="10000" height="5666"/>
+        <property name="pixel_width" value="0.001056"/>
+        <property name="pixel_height" value="0.001056"/>
+        <property name="focal_length" value="0.578956"/>
+        <calibration type="frame" class="adjusted">
+      <resolution width="10000" height="5666"/>
+      <f>548.253723</f>
+      <cx>4955.004883</cx>
+      <cy>2817.192139</cy>
+      <k1>-0.002493</k1>
+      <k2>-0.000356</k2>
+      <k3>0.000078</k3>
+      <p1>0.000144</p1>
+      <p2>0.000000</p2>
+        </calibration>
+      </sensor>
+    </sensors>
+    <cameras next_id="4" next_group_id="0">
+      <camera id="0" sensor_id="0" label="videoloader">
+        <transform>0.584758 0.276925 -0.762477 0.000000 -0.003501 -0.939057 -0.343743 0.000000 -0.811200 0.203676 -0.548152 0.000000 -199.154785 217.596130 3862.705078 1.000000</transform>
+      </camera>
+      <camera id="0" sensor_id="1" label="videoloader">
+        <transform>0.581385 -0.261079 0.770603 0.000000 -0.102496 -0.963075 -0.248960 0.000000 0.807147 0.065758 -0.586677 0.000000 -151.447144 838.701721 3266.194824 1.000000</transform>
+      </camera>
+      <camera id="0" sensor_id="2" label="videoloader">
+        <transform>-0.774351 -0.250939 0.580870 0.000000 0.062893 -0.943978 -0.323961 0.000000 0.629622 -0.214327 0.746753 0.000000 180.808228 579.908386 3145.165771 1.000000</transform>
+      </camera>
+      <camera id="0" sensor_id="3" label="videoloader">
+        <transform>-0.727090 0.196569 -0.657800 0.000000 0.004074 -0.956883 -0.290446 0.000000 -0.686530 -0.213859 0.694939 0.000000 47.711060 477.579102 3657.380859 1.000000</transform>
+      </camera>
+    </cameras>
+  </chunk>
+</document>

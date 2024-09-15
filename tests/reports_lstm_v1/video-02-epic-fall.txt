@@ -1,0 +1,12 @@
+File: video-02-epic-fall
+Expected fall: True
+Predicted fall: True
+Confidence: 51.29
+Activity type: general_motion
+Characteristics: lstm_detection, high_fall_probability
+Metrics:
+  max_fall_probability: 0.5129
+  mean_fall_probability: 0.4063
+  n_sequences: 19
+  threshold: 0.5
+  model_type: LSTM

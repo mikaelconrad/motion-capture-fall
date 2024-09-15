@@ -1,0 +1,9 @@
+Actors	unknown
+CutFrames	0:499
+CutFrom	C:/Captury_Data/MOCAP-01/Linda-fall/test-03
+Duration	10.000
+DurationInFrames	500
+StartTimestamp	9223372036854775807
+Time	invalid time
+Uid	42e576053f3bdf83
+tweakedFramerate	

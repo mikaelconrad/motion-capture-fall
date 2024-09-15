@@ -1,0 +1,87 @@
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# PyTorch models (large binary files - track with git-lfs or exclude)
+models/*.pt
+models/*.pth
+!models/.gitkeep
+
+# Training data and outputs
+training/data/
+training/logs/
+training/checkpoints/
+*.npz
+
+# External datasets (download separately)
+data/external/
+
+# Video files (too large for GitHub)
+*.avi
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Context files
+knowledge/
+
+# AWS training outputs
+training/aws_train_script.sh
+
+# Coverage reports
+.coverage
+htmlcov/
+.pytest_cache/

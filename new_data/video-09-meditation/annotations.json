@@ -1,0 +1,44 @@
+{
+  "video_id": "video-09-meditation",
+  "annotator": "auto",
+  "annotation_date": "2025-12-05",
+  "frame_rate": 50.0,
+  "total_frames": 450,
+  "ground_truth_fall": false,
+  "phases": [
+    {
+      "phase": "pre_fall",
+      "frame_start": 0,
+      "frame_end": 449,
+      "time_start_s": 0.0,
+      "time_end_s": 8.98,
+      "confidence": 1.0,
+      "notes": "Non-fall activity"
+    }
+  ],
+  "events": [
+    {
+      "frame": 117,
+      "time_s": 2.34,
+      "event_type": "impact_primary",
+      "severity": "high",
+      "notes": "Impact z-score: 8.5, 1.8g"
+    },
+    {
+      "frame": 121,
+      "time_s": 2.42,
+      "event_type": "max_descent_velocity",
+      "severity": "medium",
+      "notes": "Vertical velocity: -0.91 m/s"
+    },
+    {
+      "frame": 252,
+      "time_s": 5.04,
+      "event_type": "max_trunk_tilt",
+      "severity": "high",
+      "notes": "Trunk tilt: 90.0 degrees"
+    }
+  ],
+  "notes": "Auto-generated from video-09-meditation.c3d",
+  "quality": "good"
+}

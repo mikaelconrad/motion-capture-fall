@@ -1,0 +1,11 @@
+Run: 2026-01-03 18:39:51
+
+video-02-epic-fall: expected=True, predicted=True
+video-04-short-fall-standing-up-try: expected=True, predicted=True
+video-05-turn: expected=False, predicted=False
+video-06-under-the-mattress: expected=False, predicted=True
+video-09-meditation: expected=False, predicted=False
+video-11-dance: expected=False, predicted=False
+
+TP=2 TN=3 FP=1 FN=0
+Accuracy=0.833

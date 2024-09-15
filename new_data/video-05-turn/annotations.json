@@ -1,0 +1,44 @@
+{
+  "video_id": "video-05-turn",
+  "annotator": "auto",
+  "annotation_date": "2025-12-05",
+  "frame_rate": 50.0,
+  "total_frames": 500,
+  "ground_truth_fall": false,
+  "phases": [
+    {
+      "phase": "pre_fall",
+      "frame_start": 0,
+      "frame_end": 499,
+      "time_start_s": 0.0,
+      "time_end_s": 9.98,
+      "confidence": 1.0,
+      "notes": "Non-fall activity"
+    }
+  ],
+  "events": [
+    {
+      "frame": 499,
+      "time_s": 9.98,
+      "event_type": "impact_primary",
+      "severity": "high",
+      "notes": "Impact z-score: 14.9, 3.6g"
+    },
+    {
+      "frame": 369,
+      "time_s": 7.38,
+      "event_type": "max_descent_velocity",
+      "severity": "medium",
+      "notes": "Vertical velocity: -1.00 m/s"
+    },
+    {
+      "frame": 451,
+      "time_s": 9.02,
+      "event_type": "max_trunk_tilt",
+      "severity": "high",
+      "notes": "Trunk tilt: 90.0 degrees"
+    }
+  ],
+  "notes": "Auto-generated from video-05-turn.c3d",
+  "quality": "good"
+}

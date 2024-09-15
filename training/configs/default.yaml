@@ -1,0 +1,50 @@
+# Default training configuration
+
+# Model architecture
+model:
+  type: lstm  # lstm or lstm_attention
+  input_size: 10
+  hidden_size: 64
+  num_layers: 2
+  dropout: 0.3
+  bidirectional: true
+
+# Training parameters
+training:
+  epochs: 100
+  batch_size: 32
+  learning_rate: 0.001
+  early_stopping_patience: 10
+  scheduler:
+    type: reduce_on_plateau
+    factor: 0.5
+    patience: 5
+
+# Data parameters
+data:
+  sequence_length: 50
+  overlap: 25
+  train_ratio: 0.8
+
+# Augmentation
+augmentation:
+  enabled: true
+  multiplier: 50
+  time_warp:
+    enabled: true
+    sigma: 0.2
+  noise:
+    enabled: true
+    std: 0.02
+  random_crop:
+    enabled: true
+    min_ratio: 0.8
+  channel_dropout:
+    enabled: true
+    prob: 0.1
+
+# Output
+output:
+  model_dir: models
+  log_dir: training/logs
+  checkpoint_every: 10

@@ -1,0 +1,13 @@
+Actors	unknown
+CurrentFrame	0
+CutFrames	0:449
+CutFrom	C:/Captury_Data/MOCAP-01/Linda-fall/test-04
+Duration	09.000
+DurationInFrames	450
+Framerate	50/1
+Name	video-09-meditation
+RecordedWith	
+StartTimestamp	9223372036854775807
+Time	invalid time
+Uid	35b7227555cd7160
+tweakedFramerate	

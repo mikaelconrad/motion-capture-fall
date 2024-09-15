@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fall Detection Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <div class="page">
+      <header class="hero">
+        <div class="brand">
+          <span class="brand-name">Motion Capture Fall</span>
+        </div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Fall Detection API</p>
+            <h1>Biomechanics and MoCap kinematics.</h1>
+            <p class="lead">
+              Upload a C3D file to detect falls, inspect kinematic metrics, and
+              review timeline plots in seconds.
+            </p>
+            <div class="hero-actions">
+              <button type="button" class="ghost" id="refreshHealth">Check API</button>
+              <div class="health" id="healthStatus">API status pending.</div>
+            </div>
+          </div>
+          <div class="hero-figure">
+            <img src="figure.png" alt="Motion capture figure" />
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="panel form-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Analyze a recording</h2>
+              <p>Select a motion capture file to run detection.</p>
+            </div>
+          </div>
+          <form id="analyzeForm">
+            <label class="file-drop" id="fileDrop">
+              <input id="fileInput" type="file" accept=".c3d" required />
+              <div class="file-text">
+                <span class="file-title" id="fileTitle">Drop C3D file here</span>
+                <span class="file-sub" id="fileSub">or click to browse</span>
+              </div>
+            </label>
+            <div class="form-row">
+              <div class="field">
+                <label for="detectorSelect">Detector</label>
+                <select id="detectorSelect">
+                  <option value="rules">Rules (interpretable)</option>
+                  <option value="lstm">LSTM (requires torch)</option>
+                </select>
+              </div>
+              <div class="field check-field">
+                <span class="label">Extras</span>
+                <label class="check">
+                  <input type="checkbox" id="classifyToggle" checked />
+                  Classify fall type
+                </label>
+                <label class="check">
+                  <input type="checkbox" id="nearFallsToggle" />
+                  Detect near-falls
+                </label>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="primary" id="analyzeButton">Run analysis</button>
+              <button type="button" class="secondary" id="resetButton">Reset</button>
+              <div class="status" id="formStatus">Ready.</div>
+            </div>
+          </form>
+          <div class="form-note">
+            <div class="note-title">Run locally</div>
+            <div class="note-body">
+              Start the API with <code>python api/server.py</code>, then open
+              <code>http://localhost:5003/frontend/index.html</code>.
+            </div>
+          </div>
+        </section>
+
+        <section class="panel results-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Results</h2>
+              <p id="resultMeta">Awaiting analysis.</p>
+            </div>
+          </div>
+
+          <div class="empty-state" id="emptyState">
+            Upload a C3D file to see detection results and plots.
+          </div>
+
+          <div class="results-content hidden" id="resultsContent">
+            <div class="summary-card">
+              <div class="summary-top">
+                <span class="badge" id="fallBadge">Awaiting</span>
+                <div class="confidence">
+                  <span class="label">Confidence</span>
+                  <span class="value" id="confidenceValue">--</span>
+                </div>
+              </div>
+              <div class="progress">
+                <span id="confidenceBar"></span>
+              </div>
+              <div class="summary-grid">
+                <div>
+                  <div class="label">Activity type</div>
+                  <div class="value" id="activityValue">--</div>
+                </div>
+                <div>
+                  <div class="label">Characteristics</div>
+                  <div class="tag-row" id="characteristicsTags"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="metrics-grid" id="metricsGrid"></div>
+
+            <div class="timeline-grid">
+              <div class="chart-card">
+                <div class="chart-title">Pelvis height (m)</div>
+                <canvas id="pelvisChart"></canvas>
+              </div>
+              <div class="chart-card">
+                <div class="chart-title">Head height (m)</div>
+                <canvas id="headChart"></canvas>
+              </div>
+              <div class="chart-card">
+                <div class="chart-title">Vertical velocity (m/s)</div>
+                <canvas id="velocityChart"></canvas>
+              </div>
+              <div class="chart-card">
+                <div class="chart-title">Trunk tilt (deg)</div>
+                <canvas id="tiltChart"></canvas>
+              </div>
+            </div>
+
+            <div class="extras-grid">
+              <div class="extra-card">
+                <div class="extra-title">Fall type</div>
+                <div class="extra-body" id="fallTypeBody">Not requested.</div>
+              </div>
+              <div class="extra-card">
+                <div class="extra-title">Near-falls</div>
+                <div class="extra-body" id="nearFallsBody">Not requested.</div>
+              </div>
+            </div>
+
+            <details class="raw-data">
+              <summary>Raw JSON</summary>
+              <pre id="rawJson"></pre>
+            </details>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

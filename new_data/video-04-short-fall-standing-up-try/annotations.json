@@ -1,0 +1,81 @@
+{
+  "video_id": "video-04-short-fall-standing-up-try",
+  "annotator": "auto",
+  "annotation_date": "2025-12-05",
+  "frame_rate": 50.0,
+  "total_frames": 500,
+  "ground_truth_fall": true,
+  "phases": [
+    {
+      "phase": "pre_fall",
+      "frame_start": 0,
+      "frame_end": 1,
+      "time_start_s": 0.0,
+      "time_end_s": 0.02,
+      "confidence": 1.0,
+      "notes": "Normal activity before fall"
+    },
+    {
+      "phase": "initiation",
+      "frame_start": 2,
+      "frame_end": 50,
+      "time_start_s": 0.04,
+      "time_end_s": 1.0,
+      "confidence": 1.0,
+      "notes": "Balance loss / compensatory movements"
+    },
+    {
+      "phase": "descent",
+      "frame_start": 51,
+      "frame_end": 172,
+      "time_start_s": 1.02,
+      "time_end_s": 3.44,
+      "confidence": 1.0,
+      "notes": "Uncontrolled falling"
+    },
+    {
+      "phase": "impact",
+      "frame_start": 173,
+      "frame_end": 178,
+      "time_start_s": 3.46,
+      "time_end_s": 3.56,
+      "confidence": 1.0,
+      "notes": "Ground contact"
+    },
+    {
+      "phase": "post_fall",
+      "frame_start": 179,
+      "frame_end": 499,
+      "time_start_s": 3.58,
+      "time_end_s": 9.98,
+      "confidence": 1.0,
+      "notes": "Lying on ground"
+    }
+  ],
+  "events": [
+    {
+      "frame": 173,
+      "time_s": 3.46,
+      "event_type": "impact_primary",
+      "severity": "high",
+      "notes": "Impact z-score: 7.7, 2.1g"
+    },
+    {
+      "frame": 67,
+      "time_s": 1.34,
+      "event_type": "max_descent_velocity",
+      "severity": "medium",
+      "notes": "Vertical velocity: -0.72 m/s"
+    },
+    {
+      "frame": 117,
+      "time_s": 2.34,
+      "event_type": "max_trunk_tilt",
+      "severity": "high",
+      "notes": "Trunk tilt: 90.0 degrees"
+    }
+  ],
+  "notes": "Auto-generated from video-04-short-fall-standing-up-try.c3d",
+  "quality": "good",
+  "fall_type": "trip"
+}

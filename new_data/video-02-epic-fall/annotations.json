@@ -1,0 +1,81 @@
+{
+  "video_id": "video-02-epic-fall",
+  "annotator": "auto",
+  "annotation_date": "2025-12-05",
+  "frame_rate": 50.0,
+  "total_frames": 500,
+  "ground_truth_fall": true,
+  "phases": [
+    {
+      "phase": "pre_fall",
+      "frame_start": 0,
+      "frame_end": 124,
+      "time_start_s": 0.0,
+      "time_end_s": 2.48,
+      "confidence": 1.0,
+      "notes": "Normal activity before fall"
+    },
+    {
+      "phase": "initiation",
+      "frame_start": 125,
+      "frame_end": 173,
+      "time_start_s": 2.5,
+      "time_end_s": 3.46,
+      "confidence": 1.0,
+      "notes": "Balance loss / compensatory movements"
+    },
+    {
+      "phase": "descent",
+      "frame_start": 174,
+      "frame_end": 418,
+      "time_start_s": 3.48,
+      "time_end_s": 8.36,
+      "confidence": 1.0,
+      "notes": "Uncontrolled falling"
+    },
+    {
+      "phase": "impact",
+      "frame_start": 419,
+      "frame_end": 424,
+      "time_start_s": 8.38,
+      "time_end_s": 8.48,
+      "confidence": 1.0,
+      "notes": "Ground contact"
+    },
+    {
+      "phase": "post_fall",
+      "frame_start": 425,
+      "frame_end": 499,
+      "time_start_s": 8.5,
+      "time_end_s": 9.98,
+      "confidence": 1.0,
+      "notes": "Lying on ground"
+    }
+  ],
+  "events": [
+    {
+      "frame": 419,
+      "time_s": 8.38,
+      "event_type": "impact_primary",
+      "severity": "high",
+      "notes": "Impact z-score: 9.5, 2.6g"
+    },
+    {
+      "frame": 223,
+      "time_s": 4.46,
+      "event_type": "max_descent_velocity",
+      "severity": "medium",
+      "notes": "Vertical velocity: -1.09 m/s"
+    },
+    {
+      "frame": 296,
+      "time_s": 5.92,
+      "event_type": "max_trunk_tilt",
+      "severity": "high",
+      "notes": "Trunk tilt: 90.0 degrees"
+    }
+  ],
+  "notes": "Auto-generated from video-02-epic-fall.c3d",
+  "quality": "good",
+  "fall_type": "unknown"
+}

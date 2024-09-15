@@ -1,0 +1,34 @@
+# AWS training configuration
+
+# Inherit from default
+_base_: default.yaml
+
+# AWS settings
+aws:
+  profile: crypto-ml
+  region: eu-central-1
+  s3_bucket: crypto-ml-565319458516-eu-central-1
+  s3_prefix: fall-detection
+
+# EC2 instance settings
+ec2:
+  instance_type: g4dn.xlarge  # Tesla T4, 16GB VRAM
+  use_spot: true
+  spot_max_price: 0.30  # Max $/hr for spot
+  ami: ami-deep-learning  # Deep Learning AMI
+  volume_size_gb: 50
+
+# Alternative instance types (for reference)
+# g4dn.xlarge:  T4 16GB,  ~$0.16/hr spot, ~$0.53/hr on-demand
+# g4dn.2xlarge: T4 16GB,  ~$0.23/hr spot, ~$0.75/hr on-demand
+# p3.2xlarge:   V100 16GB, ~$0.92/hr spot, ~$3.06/hr on-demand
+
+# Training overrides for GPU
+training:
+  batch_size: 64  # Larger batch for GPU
+  epochs: 150  # More epochs with GPU
+
+# Data storage
+data:
+  s3_path: s3://${aws.s3_bucket}/${aws.s3_prefix}/training/
+  local_cache: /tmp/fall_detection_data/

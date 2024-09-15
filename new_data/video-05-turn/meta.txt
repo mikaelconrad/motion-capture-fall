@@ -1,0 +1,12 @@
+Actors	unknown
+CameraUids	dead00044df41e5e,dead0004cba0fb31,dead0004bd4eb24e,dead0004ba856bb7
+CurrentFrame	0
+Duration	
+DurationInFrames	500
+Framerate	50/1
+Name	video-05-turn
+RecordedWith	
+StartTimestamp	
+Time	
+Uid	111334c308052906
+tweakedFramerate	
